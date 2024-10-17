@@ -10,7 +10,7 @@ const page = ({ params }) => {
   const [data, setData] = useState(null);
 
   const fectchBlogData = async () => {
-    const response = await axios.get('/api/blog',{
+    const response = await axios.get('/api/blog', {
       params: {
         id: params.id
       }
@@ -45,23 +45,9 @@ const page = ({ params }) => {
       </div>
       <div className='mx-5 max-w-[800px] md:mx-auto mt-[-100px] mb-10'>
         <Image className='border-4 border-white' src={data.image} width={1280} height={720} alt='blog -news image' />
-        <h1 className='my-8 text-[26] font-semibold'>Introduction:</h1>
-        <p>{data.description}</p>
-        <h3 className='my-5 text-[18px] font-semibold'>Step :1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, aliquam!</h3>
-        <p className='my-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe unde magnam, possimus, quasi corporis, similique dolore recusandae quas ex suscipit numquam laudantium sed? Accusantium corrupti expedita quam nobis dolores itaque natus, molestias dolorem quibusdam obcaecati. Nihil porro cum dolore? Quos, ipsum! Assumenda veniam distinctio officia minima nostrum mollitia voluptatem cumque?</p>
-        <p className='my-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe unde magnam, possimus, quasi corporis, similique dolore recusandae quas ex suscipit numquam laudantium sed? Accusantium corrupti expedita quam nobis dolores itaque natus, molestias dolorem quibusdam obcaecati. Nihil porro cum dolore? Quos, ipsum! Assumenda veniam distinctio officia minima nostrum mollitia voluptatem cumque?</p>
-
-        <h3 className='my-5 text-[18px] font-semibold'>Step 2: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, aliquam!</h3>
-        <p className='my-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe unde magnam, possimus, quasi corporis, similique dolore recusandae quas ex suscipit numquam laudantium sed? Accusantium corrupti expedita quam nobis dolores itaque natus, molestias dolorem quibusdam obcaecati. Nihil porro cum dolore? Quos, ipsum! Assumenda veniam distinctio officia minima nostrum mollitia voluptatem cumque?</p>
-        <p className='my-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe unde magnam, possimus, quasi corporis, similique dolore recusandae quas ex suscipit numquam laudantium sed? Accusantium corrupti expedita quam nobis dolores itaque natus, molestias dolorem quibusdam obcaecati. Nihil porro cum dolore? Quos, ipsum! Assumenda veniam distinctio officia minima nostrum mollitia voluptatem cumque?</p>
-
-        <h3 className='my-5 text-[18px] font-semibold'>Step 3: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, aliquam!</h3>
-        <p className='my-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe unde magnam, possimus, quasi corporis, similique dolore recusandae quas ex suscipit numquam laudantium sed? Accusantium corrupti expedita quam nobis dolores itaque natus, molestias dolorem quibusdam obcaecati. Nihil porro cum dolore? Quos, ipsum! Assumenda veniam distinctio officia minima nostrum mollitia voluptatem cumque?</p>
-        <p className='my-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe unde magnam, possimus, quasi corporis, similique dolore recusandae quas ex suscipit numquam laudantium sed? Accusantium corrupti expedita quam nobis dolores itaque natus, molestias dolorem quibusdam obcaecati. Nihil porro cum dolore? Quos, ipsum! Assumenda veniam distinctio officia minima nostrum mollitia voluptatem cumque?</p>
-
-        <h3 className='my-5 text-[18px] font-semibold'>Conclusion</h3>
-        <p className='my-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe unde magnam, possimus, quasi corporis, similique dolore recusandae quas ex suscipit numquam laudantium sed? Accusantium corrupti expedita quam nobis dolores itaque natus, molestias dolorem quibusdam obcaecati. Nihil porro cum dolore? Quos, ipsum! Assumenda veniam distinctio officia minima nostrum mollitia voluptatem cumque?</p>
-
+         <div className='blog-content' dangerouslySetInnerHTML={{__html:data.description}}>
+          
+          </div>        
         <div className='my-24'>
           <p className='text-black font font-semibold my-4'>Share this artical on social media</p>
           <div className='flex'>
