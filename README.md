@@ -1,4 +1,4 @@
-# Next.js Blog Platform
+# Next.js Blog Platform    [🔗 Live Demo](https://blog-app-ki2u.onrender.com)
 
 ## Overview
 A full-featured blogging platform supporting content creators with an intuitive dashboard for managing posts and user subscriptions.
